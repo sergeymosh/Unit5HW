@@ -14,8 +14,8 @@ public class Unit5Task1 {
         int hdd;
         int resource;
         int count = 0;
-        Random rand = new Random();
-        Scanner scan = new Scanner(System.in);
+        Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
 
         public Computer(double processor, int ram, int hdd, int resource) {
             this.processor = processor;
@@ -34,13 +34,13 @@ public class Unit5Task1 {
 
         public void turnOn() {
             System.out.println("Enter 0 or 1 for to turn on the computer: ");
-            int scaner = scan.nextInt();
-            int random = rand.nextInt(2);
-            if (scaner == random && count < resource) {
+            int scanner = this.scanner.nextInt();
+            int random = this.random.nextInt(2);
+            if (scanner == random && count < resource) {
                 System.out.println(random);
                 System.out.println("Computer ON");
                 turnOff();
-            } else if (scaner != random) {
+            } else if (scanner != random) {
                 System.out.println(random);
                 System.out.println("Computer is burned out");
             } else {
@@ -50,16 +50,16 @@ public class Unit5Task1 {
 
         public void turnOff() {
             System.out.println("Enter 0 or 1 to turn off the computer: ");
-            int n = scan.nextInt();
-            int s = rand.nextInt(2);
-            if (n == s) {
-                System.out.println(s);
+            int scanner = this.scanner.nextInt();
+            int random = this.random.nextInt(2);
+            if (scanner == random) {
+                System.out.println(random);
                 System.out.println("Computer OFF");
                 count++;
                 System.out.println("Number of complete work cycles: " + count);
                 turnOn();
             } else {
-                System.out.println(s);
+                System.out.println(random);
                 System.out.println("Computer is burned out");
             }
 
