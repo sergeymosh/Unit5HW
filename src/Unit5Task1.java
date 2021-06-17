@@ -34,14 +34,14 @@ public class Unit5Task1 {
 
         public void turnOn() {
             System.out.println("Enter 0 or 1 for to turn on the computer: ");
-            int n = scan.nextInt();
-            int s = rand.nextInt(2);
-            if (n == s && count < resource) {
-                System.out.println(s);
+            int scaner = scan.nextInt();
+            int random = rand.nextInt(2);
+            if (scaner == random && count < resource) {
+                System.out.println(random);
                 System.out.println("Computer ON");
                 turnOff();
-            } else if (n != s) {
-                System.out.println(s);
+            } else if (scaner != random) {
+                System.out.println(random);
                 System.out.println("Computer is burned out");
             } else {
                 System.out.println("Computer is burned out. The resource limit has been exceeded!");
