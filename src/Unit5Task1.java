@@ -8,7 +8,7 @@ public class Unit5Task1 {
         computer.turnOn();
     }
 
-    public static class Computer {
+    private static class Computer {
         double processor;
         int ram;
         int hdd;
